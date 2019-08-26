@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mooloolaba</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <link
+      href="BlogPostAssets/styles/blogPostStyle.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+    <script>
+      var __adobewebfontsappname__ = "dreamweaver";
+    </script>
+    <script
+      src="http://use.edgefonts.net/montserrat:n4:default;source-sans-pro:n2:default.js"
+      type="text/javascript"
+    ></script>
+  </head>
+
+  <body>
+    <!--- add firebase scripts-->
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <div id="mainwrapper">
+      <header>
+        <!--**************************************************************************
+    Header starts here. It contains Logo and 3 navigation links. 
+    ****************************************************************************-->
+        <div id="logo">
+          <!-- <img src="logoImage.png" alt="sample logo"> --><!-- Company Logo text -->ROACH
+          FAMILY
+        </div>
+        <nav>
+          <a href="#" title="Link">WILL</a> <a href="#" title="Link">ELLY</a
+          ><a href="#" title="Link">LOUISE</a>
+        </nav>
+      </header>
+      <div id="content">
+        <div class="notOnDesktop">
+          <!-- This search box is displayed only in mobile and tablet laouts and not in desktop layouts -->
+          <input type="text" placeholder="Search" />
+        </div>
+        <section id="mainContent">
+          <!--************************************************************************
+    Main Blog content starts here
+    ****************************************************************************-->
+          <h1><!-- Blog title -->Mooloolaba Spending Money</h1>
+          <h3><!-- Tagline -->JOBS TO EARN MONEY AND SAVE</h3>
+          <div id="bannerImage">
+            <img src="#" alt="" />
+          </div>
+          <!--- start of the container here -->
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col col-sm-12">
+                <h4>Click on your image to enter you work done...</h4>
+                <div class="row">
+                  <div class="col col-sm-4">
+                    <!---START FORM MODAL HERE-->
+                    <a
+                      href="https://angel.co/company/tadpole-1?preview=1"
+                      target="_blank"
+                      ><img
+                        src="Images/IMG_4346.JPG"
+                        title="My AngelList profile"
+                        class="social"
+                        alt="AngelList"
+                    /></a>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-toggle="modal"
+                      data-target=".bd-example-modal-lg"
+                    >
+                      LOUISE FORM
+                    </button>
+
+                    <div
+                      class="modal fade bd-example-modal-lg"
+                      tabindex="-1"
+                      role="dialog"
+                      aria-labelledby="myLargeModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                              Modal title
+                            </h5>
+                            <button
+                              type="button"
+                              class="close"
+                              data-dismiss="modal"
+                              aria-label="Close"
+                            >
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <!--- this is the form  which needs to be in a modal  -->
+                            <!---this is the list of jobs dropdown -->
+                            <form
+                              id="demo-form"
+                              class="needs-validation"
+                              novalidate
+                            >
+                              <div class="form-group">
+                                <label for="eventCategories">Categories</label>
+                                <select
+                                  class="form-control-sm"
+                                  id="category-input"
+                                >
+                                  <option value="Trim trees along driveway"
+                                    >Trim trees along driveway $15</option
+                                  >
+                                  <option
+                                    value="Cut down vines along back fence"
+                                    >Cut down vines along back fence $15</option
+                                  >
+                                  <option value="Cut tree leaning on shed"
+                                    >Cut tree leaning on shed $15</option
+                                  >
+                                  <option value="Trim trees near pool"
+                                    >Trim trees near pool $15</option
+                                  >
+                                  <option value="Clean around fireplace"
+                                    >Clean around fireplace $2</option
+                                  >
+                                  <option value="Hammer in decking nails"
+                                    >Hammer in decking nails $5</option
+                                  >
+                                  <option value="Collect twigs for fire"
+                                    >Collect twigs for fire $1</option
+                                  >
+                                  <option value="Weeding">Weeding $2</option>
+                                  <option value="Wash car">Wash car $5</option>
+                                  <option value="Vacuum car"
+                                    >Vacuum car $5</option
+                                  >
+                                  <option value="Vaccum house"
+                                    >Vacuum house $2</option
+                                  >
+                                  <option value="Mop">Mop $2</option>
+                                  <option value="Clean windows"
+                                    >Clean windows $5</option
+                                  >
+                                  <option value="Cook dinner"
+                                    >Cook dinner $2</option
+                                  >
+                                </select>
+                              </div>
+                              <!---display price here-->
+                              <div class="form-group row">
+                                <label
+                                  class="col-sm-6 col-form-label"
+                                  for="maxDistance"
+                                  >Money paid for job:</label
+                                >
+                                <div class="input-group col-sm-6">
+                                  <input
+                                    class="form-control"
+                                    type="number"
+                                    id="jobValue-input"
+                                    required
+                                  />
+                                  <div class="input-group-append ">
+                                    <span
+                                      class="input-group-text"
+                                      id="dollars-text"
+                                      >dollars</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                              <!---this is the date form-->
+                              <div class="col-sm-12">
+                                <div class="row mb-1">
+                                  <label
+                                    class="col-sm-3 col-form-label"
+                                    for="dateStart"
+                                    >Date job completed</label
+                                  >
+                                  <input
+                                    class="col-sm-8 form-control"
+                                    type="date"
+                                    id="date-input"
+                                    required
+                                  />
+                                  <div class="invalid-feedback">
+                                    Please provide a valid time.
+                                  </div>
+                                </div>
+                              </div>
+                              <button
+                                type="submit"
+                                class="btn btn-primary validate"
+                                id="submitButton"
+                                href=".crushMeDaddy"
+                              >
+                                Submit
+                              </button>
+                              <!-- insert prompt "ok to proceed?-->
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button
+                              type="button"
+                              class="btn btn-secondary"
+                              data-dismiss="modal"
+                            >
+                              Close
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                              Save changes
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    ELLY FORM
+                  </div>
+                  <div class="col col-sm-4">
+                    WILLIAM FORM
+                  </div>
+                </div>
+                <br />
+                <br />
+
+                <div class="row">
+                  <div class="col col-sm-4">
+                    <div class="row">
+                      LOUISE BALANCE
+                      <div class="col col-sm-6">
+                        <!---show bank balance-->
+                        <p class="showBanktext">Bank: $</p>
+                      </div>
+                      <div class="col col-sm-6">
+                        <p id="route" class="showBankdollars"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-sm-4">
+                    ELLY BALANCE
+                    <p>$</p>
+                  </div>
+                  <div class="col col-sm-4">
+                    WILLIAM BALANCE
+                  </div>
+                </div>
+                <!--creating new bootstrap boxes above-->
+              </div>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target=".bd-table-display-modal-lg"
+            id="submit-jobs"
+          >
+            Louise Jobs Completed
+          </button>
+
+          <div
+            class="modal fade bd-table-display-modal-lg"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="myLargeModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <table id="ex-table" class="col-md-12">
+                  <tr id="tr">
+                    <th scope="col">Job</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Task Status</th>
+                    <th scope="col">Value</th>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- second attempt to display a table--->
+
+          <!--- CLOSE TABLE-->
+          <br />
+          <br />
+          <aside id="authorInfo">
+            <!-- The author information is contained here -->
+            <h2>REMEMBER !</h2>
+          </aside>
+        </section>
+        <section id="sidebar">
+          <!--************************************************************************
+    Sidebar starts here. It contains a searchbox, sample ad image and 6 links
+    ****************************************************************************-->
+          <input type="text" placeholder="Search" />
+          <div id="adimage">
+            <img src="#" alt="" />
+          </div>
+          <nav>
+            <ul>
+              <li><a href="#" title="Link">Mum</a></li>
+              <li><a href="#" title="Link">Dad</a></li>
+              <li><a href="#" title="Link">Admin</a></li>
+              <li><a href="#" title="Link">Pending</a></li>
+              <li><a href="#" title="Link">Add New Job</a></li>
+              <li><a href="#" title="Link">Amend</a></li>
+            </ul>
+          </nav>
+        </section>
+        <footer>
+          <!--************************************************************************
+    Footer starts here
+    ****************************************************************************-->
+          <article>
+            <h3>Date of Trip</h3>
+            <p>
+              Sunday 17 September to Saturday 30 September
+            </p>
+          </article>
+          <article>
+            <h3>Flight details</h3>
+            <p>Jetstar Flight JQxxx</p>
+          </article>
+        </footer>
+      </div>
+      <div id="footerbar"><!-- Small footerbar at the bottom --></div>
+    </div>
+  </body>
+  <script src="./Javascript/form.js"></script>
+</html>
