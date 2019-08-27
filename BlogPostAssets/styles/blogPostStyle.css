@@ -173,6 +173,12 @@ footer {
   margin-top: 8px;
   margin-right: 5px;
 }
+.socialE {
+  width: 150px;
+  height: 225px;
+  margin-top: 8px;
+  margin-right: 8px;
+}
 #mainwrapper header nav a {
   /* Links in header */
   color: rgba(146, 146, 146, 1);

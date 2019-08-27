@@ -23,3 +23,10 @@ $("#submit-jobs").on("click", function(event) {
       $('#tableBody').append(row);
     });
   });
+  console.log("LOUISE");
+  console.log(childSnapshot.val().category);
+  console.log(childSnapshot.val().taskStatus);
+  console.log(childSnapshot.val().date);
+  console.log(childSnapshot.val().jobValue);
+  console.log(childSnapshot.val().bankBalance);
+  console.log(childSnapshot.val().dateAdded);

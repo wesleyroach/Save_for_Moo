@@ -87,16 +87,14 @@
                 <h4>Click on your image to enter you work done...</h4>
                 <div class="row">
                   <div class="col col-sm-4">
-                    <!---START FORM MODAL HERE-->
-                    <a
-                      href="https://angel.co/company/tadpole-1?preview=1"
-                      target="_blank"
+                    <a href="#" target="_blank"
                       ><img
-                        src="Images/IMG_4346.JPG"
-                        title="My AngelList profile"
-                        class="social"
-                        alt="AngelList"
+                        src="Images/IMG_4356.JPG"
+                        title="LOUISE"
+                        class="socialE"
+                        alt="LOUISE"
                     /></a>
+                    <!---START FORM MODAL HERE-->
                     <button
                       type="button"
                       class="btn btn-primary"
@@ -117,7 +115,7 @@
                         <div class="modal-content">
                           <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">
-                              Modal title
+                              LOUISE FORM
                             </h5>
                             <button
                               type="button"
@@ -250,22 +248,339 @@
                       </div>
                     </div>
                   </div>
+                  <!-- ELLY's FORM STARTS HERE-->
                   <div class="col col-sm-4">
-                    ELLY FORM
+                    <a href="#" target="_blank"
+                      ><img
+                        src="Images/IMG_4342.JPG"
+                        title="ELLY"
+                        class="socialE"
+                        alt="ELLY"
+                    /></a>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-toggle="modal"
+                      data-target=".bd-elly-modal-lg"
+                    >
+                      ELLY FORM
+                    </button>
+
+                    <div
+                      class="modal fade bd-elly-modal-lg"
+                      tabindex="-1"
+                      role="dialog"
+                      aria-labelledby="myLargeModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                              ELLY'S FORM
+                            </h5>
+                            <button
+                              type="button"
+                              class="close"
+                              data-dismiss="modal"
+                              aria-label="Close"
+                            >
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <!--- this is the form  which needs to be in a modal  -->
+                            <!---this is the list of jobs dropdown -->
+                            <form
+                              id="demo-form"
+                              class="needs-validation"
+                              novalidate
+                            >
+                              <div class="form-group">
+                                <label for="eventCategories">Categories</label>
+                                <select
+                                  class="form-control-sm"
+                                  id="category-input"
+                                >
+                                  <option value="Trim trees along driveway"
+                                    >Trim trees along driveway $15</option
+                                  >
+                                  <option
+                                    value="Cut down vines along back fence"
+                                    >Cut down vines along back fence $15</option
+                                  >
+                                  <option value="Cut tree leaning on shed"
+                                    >Cut tree leaning on shed $15</option
+                                  >
+                                  <option value="Trim trees near pool"
+                                    >Trim trees near pool $15</option
+                                  >
+                                  <option value="Clean around fireplace"
+                                    >Clean around fireplace $2</option
+                                  >
+                                  <option value="Hammer in decking nails"
+                                    >Hammer in decking nails $5</option
+                                  >
+                                  <option value="Collect twigs for fire"
+                                    >Collect twigs for fire $1</option
+                                  >
+                                  <option value="Weeding">Weeding $2</option>
+                                  <option value="Wash car">Wash car $5</option>
+                                  <option value="Vacuum car"
+                                    >Vacuum car $5</option
+                                  >
+                                  <option value="Vaccum house"
+                                    >Vacuum house $2</option
+                                  >
+                                  <option value="Mop">Mop $2</option>
+                                  <option value="Clean windows"
+                                    >Clean windows $5</option
+                                  >
+                                  <option value="Cook dinner"
+                                    >Cook dinner $2</option
+                                  >
+                                </select>
+                              </div>
+                              <!---display price here-->
+                              <div class="form-group row">
+                                <label
+                                  class="col-sm-6 col-form-label"
+                                  for="maxDistance"
+                                  >Money paid for job:</label
+                                >
+                                <div class="input-group col-sm-6">
+                                  <input
+                                    class="form-control"
+                                    type="number"
+                                    id="jobValue-input"
+                                    required
+                                  />
+                                  <div class="input-group-append ">
+                                    <span
+                                      class="input-group-text"
+                                      id="dollars-text"
+                                      >dollars</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                              <!---this is the date form-->
+                              <div class="col-sm-12">
+                                <div class="row mb-1">
+                                  <label
+                                    class="col-sm-3 col-form-label"
+                                    for="dateStart"
+                                    >Date job completed</label
+                                  >
+                                  <input
+                                    class="col-sm-8 form-control"
+                                    type="date"
+                                    id="date-input"
+                                    required
+                                  />
+                                  <div class="invalid-feedback">
+                                    Please provide a valid time.
+                                  </div>
+                                </div>
+                              </div>
+                              <button
+                                type="submit"
+                                class="btn btn-primary validate"
+                                id="submitButtonE"
+                                href=".crushMeDaddy"
+                              >
+                                Submit
+                              </button>
+                              <!-- insert prompt "ok to proceed?-->
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button
+                              type="button"
+                              class="btn btn-secondary"
+                              data-dismiss="modal"
+                            >
+                              Close
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                              Save changes
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+                  <!--- WILLIAM's FORM STARTS HERE-->
                   <div class="col col-sm-4">
-                    WILLIAM FORM
+                    <a href="#" target="_blank"
+                      ><img
+                        src="Images/IMG_4360.JPG"
+                        title="WILLIAM"
+                        class="socialE"
+                        alt="WILLIAM"
+                    /></a>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-toggle="modal"
+                      data-target=".bd-william-modal-lg"
+                    >
+                      WILLIAM FORM
+                    </button>
+
+                    <div
+                      class="modal fade bd-william-modal-lg"
+                      tabindex="-1"
+                      role="dialog"
+                      aria-labelledby="myLargeModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                              WILLIAM'S FORM
+                            </h5>
+                            <button
+                              type="button"
+                              class="close"
+                              data-dismiss="modal"
+                              aria-label="Close"
+                            >
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <!--- this is the form  which needs to be in a modal  -->
+                            <!---this is the list of jobs dropdown -->
+                            <form
+                              id="demo-form"
+                              class="needs-validation"
+                              novalidate
+                            >
+                              <div class="form-group">
+                                <label for="eventCategories">Categories</label>
+                                <select
+                                  class="form-control-sm"
+                                  id="category-input"
+                                >
+                                  <option value="Trim trees along driveway"
+                                    >Trim trees along driveway $15</option
+                                  >
+                                  <option
+                                    value="Cut down vines along back fence"
+                                    >Cut down vines along back fence $15</option
+                                  >
+                                  <option value="Cut tree leaning on shed"
+                                    >Cut tree leaning on shed $15</option
+                                  >
+                                  <option value="Trim trees near pool"
+                                    >Trim trees near pool $15</option
+                                  >
+                                  <option value="Clean around fireplace"
+                                    >Clean around fireplace $2</option
+                                  >
+                                  <option value="Hammer in decking nails"
+                                    >Hammer in decking nails $5</option
+                                  >
+                                  <option value="Collect twigs for fire"
+                                    >Collect twigs for fire $1</option
+                                  >
+                                  <option value="Weeding">Weeding $2</option>
+                                  <option value="Wash car">Wash car $5</option>
+                                  <option value="Vacuum car"
+                                    >Vacuum car $5</option
+                                  >
+                                  <option value="Vaccum house"
+                                    >Vacuum house $2</option
+                                  >
+                                  <option value="Mop">Mop $2</option>
+                                  <option value="Clean windows"
+                                    >Clean windows $5</option
+                                  >
+                                  <option value="Cook dinner"
+                                    >Cook dinner $2</option
+                                  >
+                                </select>
+                              </div>
+                              <!---display price here-->
+                              <div class="form-group row">
+                                <label
+                                  class="col-sm-6 col-form-label"
+                                  for="maxDistance"
+                                  >Money paid for job:</label
+                                >
+                                <div class="input-group col-sm-6">
+                                  <input
+                                    class="form-control"
+                                    type="number"
+                                    id="jobValue-input"
+                                    required
+                                  />
+                                  <div class="input-group-append ">
+                                    <span
+                                      class="input-group-text"
+                                      id="dollars-text"
+                                      >dollars</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                              <!---this is the date form-->
+                              <div class="col-sm-12">
+                                <div class="row mb-1">
+                                  <label
+                                    class="col-sm-3 col-form-label"
+                                    for="dateStart"
+                                    >Date job completed</label
+                                  >
+                                  <input
+                                    class="col-sm-8 form-control"
+                                    type="date"
+                                    id="date-input"
+                                    required
+                                  />
+                                  <div class="invalid-feedback">
+                                    Please provide a valid time.
+                                  </div>
+                                </div>
+                              </div>
+                              <button
+                                type="submit"
+                                class="btn btn-primary validate"
+                                id="submitButtonW"
+                                href=".crushMeDaddy"
+                              >
+                                Submit
+                              </button>
+                              <!-- insert prompt "ok to proceed?-->
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button
+                              type="button"
+                              class="btn btn-secondary"
+                              data-dismiss="modal"
+                            >
+                              Close
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                              Save changes
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <br />
                 <br />
-
+                <!---  BANK BALANCE SHOWN  HERE   ------------------>
                 <div class="row">
                   <div class="col col-sm-4">
                     <div class="row">
                       LOUISE BALANCE
                       <div class="col col-sm-6">
-                        <!---show bank balance-->
                         <p class="showBanktext">Bank: $</p>
                       </div>
                       <div class="col col-sm-6">
@@ -274,50 +589,145 @@
                     </div>
                   </div>
                   <div class="col col-sm-4">
-                    ELLY BALANCE
-                    <p>$</p>
+                    <div class="row">
+                      <div class="col col-sm-6">
+                        ELLY'S BALANCE
+                        <p class="showBanktext">Bank: $</p>
+                      </div>
+                      <div class="col col-sm-6">
+                        <p id="routeE" class="showBankdollars"></p>
+                      </div>
+                    </div>
                   </div>
                   <div class="col col-sm-4">
-                    WILLIAM BALANCE
+                    <div class="row">
+                      WILLIAM'S BALANCE
+                      <div class="col col-sm-6">
+                        <p class="showBanktext">Bank: $</p>
+                      </div>
+                      <div class="col col-sm-6">
+                        <p id="routeW" class="showBankdollars"></p>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <!--creating new bootstrap boxes above-->
               </div>
             </div>
-          </div>
-          <button
-            type="button"
-            class="btn btn-primary"
-            data-toggle="modal"
-            data-target=".bd-table-display-modal-lg"
-            id="submit-jobs"
-          >
-            Louise Jobs Completed
-          </button>
+            <div class="row">
+              <div class="col col-sm-4">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-toggle="modal"
+                  data-target=".bd-table-display-modal-lg"
+                  id="submit-jobs"
+                >
+                  Louise Jobs Completed
+                </button>
 
-          <div
-            class="modal fade bd-table-display-modal-lg"
-            tabindex="-1"
-            role="dialog"
-            aria-labelledby="myLargeModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-                <table id="ex-table" class="col-md-12">
-                  <tr id="tr">
-                    <th scope="col">Job</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Task Status</th>
-                    <th scope="col">Value</th>
-                  </tr>
-                </table>
+                <div
+                  class="modal fade bd-table-display-modal-lg"
+                  tabindex="-1"
+                  role="dialog"
+                  aria-labelledby="myLargeModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                          LOUISE JOBS COMPLETED
+                        </h5>
+                        <button
+                          type="button"
+                          class="close"
+                          data-dismiss="modal"
+                          aria-label="Close"
+                        >
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <table id="ex-table" class="col-md-12">
+                        <tr id="tr">
+                          <th scope="col">Job</th>
+                          <th scope="col">Date</th>
+                          <th scope="col">Task Status</th>
+                          <th scope="col">Value</th>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!---- START ELLY JOB DISPLAY TABLE ------>
+              <div class="col col-sm-4">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-toggle="modal"
+                  data-target=".bd-Elly-display-modal-lg"
+                  id="submit-jobsE"
+                >
+                  Elly Jobs Completed
+                </button>
+
+                <div
+                  class="modal fade bd-Elly-display-modal-lg"
+                  tabindex="-1"
+                  role="dialog"
+                  aria-labelledby="myLargeModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <table id="ex-tableE" class="col-md-12">
+                        <tr id="tr">
+                          <th scope="col">Job</th>
+                          <th scope="col">Date</th>
+                          <th scope="col">Task Status</th>
+                          <th scope="col">Value</th>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!----   WILLIAM JOB DISPLAY TABLE-->
+              <div class="col col-sm-4">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-toggle="modal"
+                  data-target=".bd-William-display-modal-lg"
+                  id="submit-jobsW"
+                >
+                  William Jobs Completed
+                </button>
+                <div
+                  class="modal fade bd-William-display-modal-lg"
+                  tabindex="-1"
+                  role="dialog"
+                  aria-labelledby="myLargeModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <table id="ex-tableW" class="col-md-12">
+                        <tr id="tr">
+                          <th scope="col">Job</th>
+                          <th scope="col">Date</th>
+                          <th scope="col">Task Status</th>
+                          <th scope="col">Value</th>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+            <!--- CLOSING CONTAINER  DIV  BELOW-->
           </div>
-          <!-- second attempt to display a table--->
-
-          <!--- CLOSE TABLE-->
           <br />
           <br />
           <aside id="authorInfo">
