@@ -21,6 +21,18 @@ var jobInput = 0;
 var jobValue = parseInt(jobInput);
 var bankInput = 0;
 var bankBalance = parseInt(bankInput);
+var categoryE = "";
+var categoryW = "";
+var taskStatusE = "";
+var taskStatusW = "";
+var dateE = "";
+var dateW = "";
+var jobValueE = 0;
+var jobValueW = 0;
+var jobChangeW = 0;
+var jobChangeW = 0;
+var bankBalanceE = 0;
+var bankBalanceW = 0;
 
 // Capture Button Click
 $(document).ready(function() {
@@ -100,27 +112,27 @@ $(document).ready(function() {
     // YOUR TASK!!!
     // Code in the logic for storing and retrieving the most recent user.
     // Don't forget to provide initial data to your Firebase database.
-    category = $("#category-input")
+    categoryE = $("#category-inputE")
       .val()
       .trim();
-    taskStatus = "Pending";
-    date = $("#date-input")
+    taskStatusE = "Pending";
+    dateE = $("#date-inputE")
       .val()
       .trim();
-    jobChange = $("#jobValue-input")
+    jobChangeE = $("#jobValue-inputE")
       .val()
       .trim();
-    jobValue = parseInt(jobChange);
-    bankBalance = bankBalance + jobValue;
+    jobValueE = parseInt(jobChangeE);
+    bankBalanceE = bankBalanceE + jobValueE;
 
     // Code for the push
     dataRef.ref("/Elly").push({
-      category: category,
-      taskStatus: taskStatus,
-      date: date,
-      jobValue: jobValue,
-      bankBalance: bankBalance,
-      dateAdded: firebase.database.ServerValue.TIMESTAMP
+      categoryE: categoryE,
+      taskStatusE: taskStatusE,
+      dateE: dateE,
+      jobValueE: jobValueE,
+      bankBalanceE: bankBalanceE,
+      dateAddedE: firebase.database.ServerValue.TIMESTAMP
     });
   });
 });
@@ -131,8 +143,8 @@ dataRef.ref("/Elly").on(
   function(childSnapshot) {
     //  Update the displayed bank balance
 
-    var tryIt = childSnapshot.val().bankBalance;
-    $("#routeE").text(tryIt);
+    var tryItE = childSnapshot.val().bankBalanceE;
+    $("#routeE").text(tryItE);
 
     // Handle the errors
   },
@@ -146,17 +158,17 @@ $("#submit-jobsE").on("click", function(event) {
   var database = firebase.database();
   database.ref("/Elly").once("value", function(childSnapshot) {
     if (childSnapshot.exists()) {
-      var content = "";
+      var contentE = "";
       childSnapshot.forEach(function(data) {
-        var val = data.val();
-        content += "<tr>";
-        content += "<td>" + val.category + "</td>";
-        content += "<td>" + val.date + "</td>";
-        content += "<td>" + val.taskStatus + "</td>";
-        content += "<td>" + val.jobValue + "</td>";
-        content += "</tr>";
+        var valE = data.val();
+        contentE += "<tr>";
+        contentE += "<td>" + valE.categoryE + "</td>";
+        contentE += "<td>" + valE.dateE + "</td>";
+        contentE += "<td>" + valE.taskStatusE + "</td>";
+        contentE += "<td>" + valE.jobValueE + "</td>";
+        contentE += "</tr>";
       });
-      $("#ex-tableE").append(content);
+      $("#ex-tableE").append(contentE);
     }
   });
 });
@@ -170,27 +182,27 @@ $(document).ready(function() {
     // YOUR TASK!!!
     // Code in the logic for storing and retrieving the most recent user.
     // Don't forget to provide initial data to your Firebase database.
-    category = $("#category-input")
+    categoryW = $("#category-inputW")
       .val()
       .trim();
-    taskStatus = "Pending";
-    date = $("#date-input")
+    taskStatusW = "Pending";
+    dateW = $("#date-inputW")
       .val()
       .trim();
-    jobChange = $("#jobValue-input")
+    jobChangeW = $("#jobValue-inputW")
       .val()
       .trim();
-    jobValue = parseInt(jobChange);
-    bankBalance = bankBalance + jobValue;
+    jobValueW = parseInt(jobChangeW);
+    bankBalanceW = bankBalanceW + jobValueW;
 
     // Code for the push
     dataRef.ref("/William").push({
-      category: category,
-      taskStatus: taskStatus,
-      date: date,
-      jobValue: jobValue,
-      bankBalance: bankBalance,
-      dateAdded: firebase.database.ServerValue.TIMESTAMP
+      categoryW: categoryW,
+      taskStatusW: taskStatusW,
+      dateW: dateW,
+      jobValueW: jobValueW,
+      bankBalanceW: bankBalanceW,
+      dateAddedW: firebase.database.ServerValue.TIMESTAMP
     });
   });
 });
@@ -201,8 +213,8 @@ dataRef.ref("/William").on(
   function(childSnapshot) {
     //  Update the displayed bank balance
 
-    var tryIt = childSnapshot.val().bankBalance;
-    $("#routeW").text(tryIt);
+    var tryItW = childSnapshot.val().bankBalanceW;
+    $("#routeW").text(tryItW);
 
     // Handle the errors
   },
@@ -216,17 +228,17 @@ $("#submit-jobsW").on("click", function(event) {
   var database = firebase.database();
   database.ref("/William").once("value", function(childSnapshot) {
     if (childSnapshot.exists()) {
-      var content = "";
+      var contentW = "";
       childSnapshot.forEach(function(data) {
-        var val = data.val();
-        content += "<tr>";
-        content += "<td>" + val.category + "</td>";
-        content += "<td>" + val.date + "</td>";
-        content += "<td>" + val.taskStatus + "</td>";
-        content += "<td>" + val.jobValue + "</td>";
-        content += "</tr>";
+        var valW = data.val();
+        contentW += "<tr>";
+        contentW += "<td>" + valW.categoryW + "</td>";
+        contentW += "<td>" + valW.dateW + "</td>";
+        contentW += "<td>" + valW.taskStatusW + "</td>";
+        contentW += "<td>" + valW.jobValueW + "</td>";
+        contentW += "</tr>";
       });
-      $("#ex-tableW").append(content);
+      $("#ex-tableW").append(contentW);
     }
   });
 });
