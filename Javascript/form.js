@@ -38,7 +38,7 @@ var bankBalanceW = 0;
 $(document).ready(function() {
   $("#submitButton").on("click", function(event) {
     event.preventDefault();
-
+    confirm("Submitted successfully");
     // YOUR TASK!!!
     // Code in the logic for storing and retrieving the most recent user.
     // Don't forget to provide initial data to your Firebase database.
@@ -85,6 +85,8 @@ dataRef.ref("/Louise").on(
 // on button click, load table of Louise jobs completed
 $("#submit-jobs").on("click", function(event) {
   event.preventDefault();
+  $("#ex-table").clear;
+
   var database = firebase.database();
   database.ref("/Louise").once("value", function(childSnapshot) {
     if (childSnapshot.exists()) {
@@ -108,7 +110,7 @@ $("#submit-jobs").on("click", function(event) {
 $(document).ready(function() {
   $("#submitButtonE").on("click", function(event) {
     event.preventDefault();
-
+    confirm("Submitted successfully");
     // YOUR TASK!!!
     // Code in the logic for storing and retrieving the most recent user.
     // Don't forget to provide initial data to your Firebase database.
@@ -155,6 +157,7 @@ dataRef.ref("/Elly").on(
 // on button click, load table of Elly's jobs completed
 $("#submit-jobsE").on("click", function(event) {
   event.preventDefault();
+  $("#ex-tableE").clear;
   var database = firebase.database();
   database.ref("/Elly").once("value", function(childSnapshot) {
     if (childSnapshot.exists()) {
@@ -178,7 +181,7 @@ $("#submit-jobsE").on("click", function(event) {
 $(document).ready(function() {
   $("#submitButtonW").on("click", function(event) {
     event.preventDefault();
-
+    confirm("Submitted successfully");
     // YOUR TASK!!!
     // Code in the logic for storing and retrieving the most recent user.
     // Don't forget to provide initial data to your Firebase database.
@@ -225,6 +228,7 @@ dataRef.ref("/William").on(
 // on button click, load table of Williams jobs completed
 $("#submit-jobsW").on("click", function(event) {
   event.preventDefault();
+  $("#ex-tableW").clear;
   var database = firebase.database();
   database.ref("/William").once("value", function(childSnapshot) {
     if (childSnapshot.exists()) {

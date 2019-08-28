@@ -55,6 +55,7 @@ header nav a {
   font-weight: 200;
   text-align: justify;
 }
+
 #content #mainContent #authorInfo {
   /* Author info section */
   background-color: rgba(208, 207, 207, 1);
@@ -179,16 +180,28 @@ footer {
   margin-top: 8px;
   margin-right: 8px;
 }
+.piggy {
+  width: 20px;
+  height: 20px;
+}
 #mainwrapper header nav a {
   /* Links in header */
   color: rgba(146, 146, 146, 1);
   text-decoration: none;
 }
+.showBankbalance {
+  text-align: center;
+  font-size: 20px;
+}
 .showBankdollars {
   text-align: left;
+  font-size: 20px;
+  font-weight: bold;
 }
 .showBanktext {
   text-align: right;
+  font-size: 20px;
+  font-weight: bold;
 }
 /* Tablet view */
 @media screen and (max-width: 769px) {
