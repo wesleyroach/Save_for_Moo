@@ -246,3 +246,35 @@ $("#submit-jobsW").on("click", function(event) {
     }
   });
 });
+// *****************  MUM's PENDING ITEMS  ********************************************
+// query the database of all the pending items and display in a table on mum.html page
+$("#submit-mum").on("click", function(event) {
+  event.preventDefault();
+  var database = firebase.database();
+  for (i = 1; i < 4; i++) {
+    if (i === 1) {
+      var look = "Louise";
+    } else if (i === 2) {
+      var look = "Elly";
+    } else {
+      var look = "William";
+    }
+    database.ref("/" + look).once("value", function(childSnapshot) {
+      $("#mumstable").clear;
+      if (childSnapshot.exists()) {
+        var contentM = "";
+        childSnapshot.forEach(function(data) {
+          var valM = data.val();
+          console.log(valM);
+          contentM += "<tr>";
+          contentM += "<td>" + valM.categoryM + "</td>";
+          contentM += "<td>" + valM.dateM + "</td>";
+          contentM += "<td>" + valM.taskStatusM + "</td>";
+          contentM += "<td>" + valM.jobValueM + "</td>";
+          contentM += "</tr>";
+        });
+        $("#mumstable").append(contentM);
+      }
+    });
+  }
+});
