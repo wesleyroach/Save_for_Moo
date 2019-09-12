@@ -33,6 +33,9 @@ var jobChangeW = 0;
 var jobChangeW = 0;
 var bankBalanceE = 0;
 var bankBalanceW = 0;
+var categoryM = "";
+var taskStatusM = "";
+var dateM = "";
 
 // Capture Button Click
 $(document).ready(function() {
@@ -53,7 +56,7 @@ $(document).ready(function() {
       .val()
       .trim();
     jobValue = parseInt(jobChange);
-    bankBalance = bankBalance + jobValue;
+    bankBalance = childSnapshot.val().bankBalance + jobValue;
 
     // Code for the push
     dataRef.ref("/Louise").push({
@@ -125,7 +128,7 @@ $(document).ready(function() {
       .val()
       .trim();
     jobValueE = parseInt(jobChangeE);
-    bankBalanceE = bankBalanceE + jobValueE;
+    bankBalanceE = childSnapshot.val().bankBalanceE + jobValueE;
 
     // Code for the push
     dataRef.ref("/Elly").push({
@@ -196,7 +199,7 @@ $(document).ready(function() {
       .val()
       .trim();
     jobValueW = parseInt(jobChangeW);
-    bankBalanceW = bankBalanceW + jobValueW;
+    bankBalanceW = childSnapshot.val().bankBalanceW + jobValueW;
 
     // Code for the push
     dataRef.ref("/William").push({
@@ -247,6 +250,23 @@ $("#submit-jobsW").on("click", function(event) {
   });
 });
 // *****************  MUM's PENDING ITEMS  ********************************************
+// first run the 'on' click function to update the checked lines
+$("#update").click(function() {
+  $("table")
+    .find("input[type=checkbox]")
+    .each(function() {
+      if ($(this).is(":checked") == true) {
+        var txt_value = $("#line-no").val();
+        if (txt_value != "") {
+          $(this)
+            .closest("tr")
+            .find("td.cn")
+            .text(txt_value);
+        }
+      }
+    });
+});
+
 // query the database of all the pending items and display in a table on mum.html page
 $("#submit-mum").on("click", function(event) {
   event.preventDefault();
@@ -254,27 +274,64 @@ $("#submit-mum").on("click", function(event) {
   for (i = 1; i < 4; i++) {
     if (i === 1) {
       var look = "Louise";
+      database.ref("/" + look).once("value", function(childSnapshot) {
+        $("#mumstable").clear;
+        if (childSnapshot.exists()) {
+          var contentM = "";
+          childSnapshot.forEach(function(data) {
+            var valM = data.val();
+            console.log(valM);
+            contentM += "<tr>";
+            contentM += "<td><input type='checkbox'id='cb1'></td>";
+            contentM += "<td class='cn'>" + look + "</td>";
+            contentM += "<td>" + valM.category + "</td>";
+            contentM += "<td>" + valM.taskStatus + "</td>";
+            contentM += "<td>" + valM.date + "</td>";
+            contentM += "</tr>";
+          });
+          $("#mumstable").append(contentM);
+        }
+      });
     } else if (i === 2) {
       var look = "Elly";
+      database.ref("/" + look).once("value", function(childSnapshot) {
+        $("#mumstable").clear;
+        if (childSnapshot.exists()) {
+          var contentM = "";
+          childSnapshot.forEach(function(data) {
+            var valM = data.val();
+            console.log(valM);
+            contentM += "<tr>";
+            contentM += "<td><input type='checkbox'id='cb1'></td>";
+            contentM += "<td class='cn'>" + look + "</td>";
+            contentM += "<td>" + valM.categoryE + "</td>";
+            contentM += "<td>" + valM.taskStatusE + "</td>";
+            contentM += "<td>" + valM.dateE + "</td>";
+            contentM += "</tr>";
+          });
+          $("#mumstable").append(contentM);
+        }
+      });
     } else {
       var look = "William";
+      database.ref("/" + look).once("value", function(childSnapshot) {
+        $("#mumstable").clear;
+        if (childSnapshot.exists()) {
+          var contentM = "";
+          childSnapshot.forEach(function(data) {
+            var valM = data.val();
+            console.log(valM);
+            contentM += "<tr>";
+            contentM += "<td><input type='checkbox'id='cb1'></td>";
+            contentM += "<td>" + look + "</td>";
+            contentM += "<td>" + valM.categoryW + "</td>";
+            contentM += "<td class='cn'>" + valM.taskStatusW + "</td>";
+            contentM += "<td>" + valM.dateW + "</td>";
+            contentM += "</tr>";
+          });
+          $("#mumstable").append(contentM);
+        }
+      });
     }
-    database.ref("/" + look).once("value", function(childSnapshot) {
-      $("#mumstable").clear;
-      if (childSnapshot.exists()) {
-        var contentM = "";
-        childSnapshot.forEach(function(data) {
-          var valM = data.val();
-          console.log(valM);
-          contentM += "<tr>";
-          contentM += "<td>" + valM.categoryM + "</td>";
-          contentM += "<td>" + valM.dateM + "</td>";
-          contentM += "<td>" + valM.taskStatusM + "</td>";
-          contentM += "<td>" + valM.jobValueM + "</td>";
-          contentM += "</tr>";
-        });
-        $("#mumstable").append(contentM);
-      }
-    });
   }
 });
